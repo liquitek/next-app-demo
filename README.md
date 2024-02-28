@@ -1,4 +1,4 @@
-This Next.js app tries to pull all the embedded players from bandcamp associated with some artist alias and bandcamp domain using Next.js feature Server Actions.
+This Next.js app tries to pull all the embedded players from bandcamp.com that associated with some artist alias and a bandcamp domain using Next.js feature Server Actions.
 
 npm install
 
