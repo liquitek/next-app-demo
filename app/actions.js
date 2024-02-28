@@ -68,7 +68,7 @@ export async function scrapper(input,base) {
         await makeRequests(links,trackLinks,getTrackLinks);
         await makeRequests(wrongLinks,playerLinks,getPlayerLinks);
         await makeRequests(trackLinks,playerLinks,getPlayerLinks);
-        console.log(links);
+
 
         wrongLinks=[];
         links=[];
@@ -91,16 +91,8 @@ export async function scrapper(input,base) {
         
         async function makeRequests(arr1,arr2,fn) {
             var promises=[];
-            for (var i in arr1) {
-            
-            promises.push(fn(arr1[i],alias).then(r=>{if (r.length>0) arr2.push(...r)}))
-            /*
-            if (promises.length==50) {
-                await Promise.all(promises);
-                promises=[];
-            }
-            */
-            }
+            for (var i in arr1) 
+                promises.push(fn(arr1[i],alias).then(r=>{if (r.length>0) arr2.push(...r)}))
             await Promise.all(promises);
             promises=[];
             return true;
