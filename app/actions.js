@@ -32,7 +32,7 @@ export async function scrapper(input,base) {
             var res;
             while (true) {
                 counter++;
-                console.log(this.url+"\n");
+
                 res = await fetch(this.url);
                 
                 if (res.ok || counter==3) break;
@@ -68,7 +68,7 @@ export async function scrapper(input,base) {
         await makeRequests(links,trackLinks,getTrackLinks);
         await makeRequests(wrongLinks,playerLinks,getPlayerLinks);
         await makeRequests(trackLinks,playerLinks,getPlayerLinks);
-        console.log(links);
+
 
         wrongLinks=[];
         links=[];
