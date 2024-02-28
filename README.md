@@ -12,6 +12,8 @@ npm install
 
 npm run dev
 
+or just copy the contents of the app folder into your newly created nextjs app.
+
 
 
 
