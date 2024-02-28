@@ -1,0 +1,5 @@
+<svg className="absolute block top-0 bottom-0 left-0 right-0" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <line vector-effect="non-scaling-stroke" stroke-width="1" stroke-dasharray="1,9" stroke-linecap="undefined" stroke-linejoin="undefined"  y2="100" x2="25" y1="0" x1="25" stroke="#000" fill="none"/>
+    <line vector-effect="non-scaling-stroke" stroke-width="1" stroke-dasharray="1,9" stroke-linecap="undefined" stroke-linejoin="undefined"  y2="100" x2="50" y1="0" x1="50" stroke="#000" fill="none"/>
+    <line vector-effect="non-scaling-stroke" stroke-width="1" stroke-dasharray="1,9" stroke-linecap="undefined" stroke-linejoin="undefined"  y2="100" x2="75" y1="0" x1="75" stroke="#000" fill="none"/>
+</svg>

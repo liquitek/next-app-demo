@@ -1,0 +1,55 @@
+.container {
+	background-size: 100% 640px;
+	background-position: left top;
+	overflow: hidden;
+}
+.item {
+	flex-basis:100%;
+}
+
+@media (min-width:640px) {
+	.container {
+		background-image:url(externaldata_bg-sm.svg);
+	}
+	.item {
+		flex-basis:50%;
+	}
+}
+@media (min-width:768px) {
+	.container {
+		background-image:url(externaldata_bg-md.svg);
+	}
+	.item {
+		flex-basis:33.33%;
+	}
+}
+@media (min-width:1280px) {
+	.container {
+		background-image:url(externaldata_bg-xl.svg);
+	}
+	.item {
+		flex-basis:25%;
+	}
+}
+.item {
+	position:relative;
+}
+.item iframe {
+	background:url(Blocks-1s-200px.svg) center/contain no-repeat;
+}
+.item::after {
+	position: absolute;
+	content:'';
+	display: block;
+	height:100%;
+	top:100%;
+	bottom:0;
+	left:0;
+	right:0;
+	background-image: url(externaldata_bg.svg);
+	background-size:100%;
+	background-repeat: no-repeat;
+	background-position:center top;
+
+}
+
