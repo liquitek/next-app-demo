@@ -23,7 +23,7 @@ export default function ExternalData({className}) {
       
       async function getData() {
         setInputState(false);
-        setInputText(`Fetching data from ${bcDomain}.bandcamp.com`);
+        setInputText(`Fetching data from ${bcDomain}.bandcamp.com...`);
         const responce = await scrapper(alias,bcDomain);
         setData(responce);
         setAliasInit(alias);
