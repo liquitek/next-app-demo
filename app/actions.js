@@ -53,13 +53,12 @@ export async function scrapper(input,base) {
         var trackLinks =[];
         var playerLinks=[];
         var wrongLinks = [];
+        var links = [];
         var {alias, baseUrl} = input;
-        var links = Array.from(/<li\s+data-item.*?>.*?<a.*?href="([^"]*)".*?>.*?<span class="artist-override">(.*?)<\/span>.*?<\/li>/gmsd[Symbol.matchAll](await new Hyperlink(baseUrl+"/music").fetchData()),(m) => new Hyperlink(((m[1].indexOf("https://")>=0)?'': baseUrl)+m[1].substring(0,(m[1].indexOf("?")>0)?m[1].indexOf("?"):undefined),m[2].trim()));
+        var t = await new Hyperlink(baseUrl+"/music").fetchData();
+        JSON.parse(/data-client-items="([^"]*)"/gsmd.exec(t)[1].replaceAll("&quot;", '"')).forEach(e => links.push(new Hyperlink(baseUrl + e.page_url, e.artist)));
         console.log(`Process.counter: ${Process.counter}`);
         console.log(alias);
-
-        
-
         links.forEach(link => {
             if (link.toString().includes("track/") && link.info.includes(alias))
             wrongLinks.push(link);
